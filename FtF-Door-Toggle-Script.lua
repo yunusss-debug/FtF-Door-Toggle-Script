@@ -1,12 +1,14 @@
 --[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+                              .-') _               .-')     .-')     .-')    
+                             ( OO ) )             ( OO ).  ( OO ).  ( OO ).  
+  ,--.   ,--.,--. ,--.   ,--./ ,--,' ,--. ,--.   (_)---\_)(_)---\_)(_)---\_) 
+   \  `.'  / |  | |  |   |   \ |  |\ |  | |  |   /    _ | /    _ | /    _ |  
+ .-')     /  |  | | .-') |    \|  | )|  | | .-') \  :` `. \  :` `. \  :` `.  
+(OO  \   /   |  |_|( OO )|  .     |/ |  |_|( OO ) '..`''.) '..`''.) '..`''.) 
+ |   /  /\_  |  | | `-' /|  |\    |  |  | | `-' /.-._)   \.-._)   \.-._)   \ 
+ `-./  /.__)('  '-'(_.-' |  | \   | ('  '-'(_.-' \       /\       /\       / 
+   `--'       `-----'    `--'  `--'   `-----'     `-----'  `-----'  `-----'
+]]
 
-]]--
 
 local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v14,v15) local v16={};for v27=1, #v14 do v6(v16,v0(v4(v1(v2(v14,v27,v27 + 1 )),v1(v2(v15,1 + (v27% #v15) ,1 + (v27% #v15) + 1 )))%256 ));end return v5(v16);end local v8=game:GetService(v7("\228\208\222\55\207\181\215\11\197\240\222\55\240\178\196\27","\126\177\163\187\69\134\219\167"));local v9=game:GetService(v7("\16\217\43\215\232\38\223\13\208\245","\156\67\173\74\165"));local v10={};local v11=false;local function v12(v17) local v18=0 -0 ;local v19;while true do if (v18==(2 -1)) then for v30,v31 in ipairs(v17:GetDescendants()) do if v31:IsA(v7("\137\37\3\51\67\164\233\191","\155\203\68\112\86\19\197")) then v19[v31]={[v7("\101\220\56\223\79\116\233\241\66\216","\152\38\189\86\156\32\24\133")]=v31.CanCollide,[v7("\200\69\166\72\239\71\166\84\249\89\164\95","\38\156\55\199")]=v31.Transparency};end end if next(v19) then v10[v17]=v19;end break;end if (v18==(0 + 0)) then if ((v17.Name~=v7("\7\190\71\17\176\35\98\59\184\91","\38\84\215\41\118\220\70")) and (v17.Name~=v7("\116\25\55\16\242\85\50\45\29\236","\158\48\118\66\114"))) then return;end v19={};v18=1 -0 ;end end end for v20,v21 in ipairs(workspace:GetDescendants()) do if v21:IsA(v7("\133\114\120\45\31","\35\200\29\28\72\115\20\154")) then v12(v21);end end workspace.DescendantAdded:Connect(function(v22) if v22:IsA(v7("\52\176\213\218\129","\84\121\223\177\191\237\76")) then local v28=0;while true do if (v28==0) then v12(v22);if (v11 and v10[v22]) then for v36 in pairs(v10[v22]) do v36.CanCollide=false;v36.Transparency=439 -(145 + 293) ;end end break;end end end end);local function v13() local v23=885 -(261 + 624) ;while true do if ((0 -0)==v23) then local v29=430 -(44 + 386) ;while true do if (v29==(1487 -(998 + 488))) then v23=1 + 0 ;break;end if (v29==(0 + 0)) then v11= not v11;for v34,v35 in pairs(v10) do if v34.Parent then for v40,v41 in pairs(v35) do if v40 then if v11 then local v42=0 -0 ;while true do if ((772 -(201 + 571))==v42) then v40.CanCollide=false;v40.Transparency=1139 -(116 + 1022) ;break;end end else local v43=0;while true do if ((0 -0)==v43) then v40.CanCollide=v41.CanCollide;v40.Transparency=v41.Transparency;break;end end end end end else v10[v34]=nil;end end v29=1 + 0 ;end end end if ((3 -2)==v23) then v9:SetCore(v7("\136\83\199\164\20\95\36\200\189\95\202\161\46\89\63\207","\161\219\54\169\192\90\48\80"),{[v7("\125\75\20\41\76","\69\41\34\96")]=v7("\190\218\206\74\27\62\178\214\196\25\17","\75\220\163\183\106\98"),[v7("\54\191\147\35","\185\98\218\235\87")]=(v11 and v7("\239\51\40\244\205\234\217\57\42\233\200\175\207\125","\202\171\92\71\134\190")) or v7("\13\206\35\154\58\129\62\141\58\213\35\154\44\197\109","\232\73\161\76") ,[v7("\159\204\80\92\10\178\214\76","\126\219\185\34\61")]=768 -(745 + 21) });break;end end end v8.InputBegan:Connect(function(v24,v25) local v26=0 -0 ;while true do if ((0 -0)==v26) then if v25 then return;end if (v24.KeyCode==Enum.KeyCode.K) then v13();end break;end end end);
